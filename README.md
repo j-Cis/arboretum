@@ -122,7 +122,7 @@ W kodzie staram się stosować sprawdzone zasady projektowe i inżynierskie, kt�
 
 ### 💭**D1-a:**  _BAZA SYSTEMOWA: PODSTAWOWYCH WYRAZÓW_
 
-![graf-A]("./README/graphviz_D1a1.svg")
+![D1a1](https://raw.githubusercontent.com/j-Cis/arboretum/main/README/graphviz_D1a1.svg)
 
 ```graphviz
 digraph G {
@@ -188,7 +188,7 @@ digraph G {
 
 Przkładowa pozycja
 
-![graf-B]("./README/graphviz_D1a2.svg")
+![D1a2](https://raw.githubusercontent.com/j-Cis/arboretum/main/README/graphviz_D1a2.svg)
 
 ```graphviz
 digraph G {
