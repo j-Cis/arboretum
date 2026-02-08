@@ -346,12 +346,7 @@ Natomiast na karcie źródła, `w dodawaniu nowego` podajemy datę, tytuł, rodz
 
 ### 🏗️**E3:**  _Gramps_
 
-![E3](https://raw.githubusercontent.com/mod-by-cis/gramps-data-model/refs/heads/main/gramps-6.0.0_MODEL_(pol).svg)
-
-
-Na podstawie schematu modelu danych **Gramps 6.0.0-beta.2** (v.2025-02-27), oto szczegółowe zestawienie pól i powiązań dla każdego z 23 pudełek. Zgodnie z Twoją instrukcją, liczby na czarnym tle (1 lub ) oznaczają dopuszczalną liczbę referencji dla danego powiązania.
-
----
+![E3](https://raw.githubusercontent.com/j-Cis/arboretum/main/README/GRAMPS/gramps-6.0.0_MODEL_(pol).svg)
 
 #### **E3:**-1. EDYTOR NOTATEK
 
