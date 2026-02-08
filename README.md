@@ -122,6 +122,8 @@ W kodzie staram się stosować sprawdzone zasady projektowe i inżynierskie, kt�
 
 ### 💭**D1-a:**  _BAZA SYSTEMOWA: PODSTAWOWYCH WYRAZÓW_
 
+![graf-A]("./README/graphviz_D1a1.svg")
+
 ```graphviz
 digraph G {
   fontname="Arial"
@@ -186,9 +188,11 @@ digraph G {
 
 Przkładowa pozycja
 
+![graf-B]("./README/graphviz_D1a2.svg")
+
 ```graphviz
 digraph G {
-    rankdir=RL;
+    rankdir=TB;
     fontname="Arial"
     compound=true;
     nodesep=0.2; 
@@ -196,84 +200,25 @@ digraph G {
 
     node [fontname="Arial", shape=box, style="filled,rounded", fillcolor="#e1f5fe", penwidth=0];
 
-    subgraph cluster_fleksje_atomy {
-        label = "ATOMY\nFLEKSJE:";
+    subgraph cluster_atomy {
+        label = "ATOMY\n(lemma i fleksje)";
         fontname="Arial Bold";
-        fontsize=20;
+        fontsize=24;
         fontcolor="#4b4b4b";
-        style=filled;
-        color="#dbdbdb";
-
-        f1_gen_sing [label="Jana\n/jana/"];
-        f1_dat_sing [label="Janowi\n/janɔvi/"];
-        f1_acc_sing [label="Jana\n/jana/"];
-        f1_ins_sing [label="Janem\n/janɛm/"];
-        f1_loc_sing [label="Janie\n/jaɲɛ/"];
-        f1_pre_sing [label="Janie\n/jaɲɛ/"];
-        f1_voc_sing [label="Janie\n/jaɲɛ/"];
-
-        f2_gen_sing [label="Jasia\n/jaɕa/"];
-        f2_dat_sing [label="Jasiowi\n/jaɕɔvi/"];
-        f2_acc_sing [label="Jasia\n/jaɕa/"];
-        f2_ins_sing [label="Jasiem\n/jaɕɛm/"];
-        f2_loc_sing [label="Jasiu\n/jaɕu/"];
-        f2_pre_sing [label="Jasiu\n/jaɕu/"];
-        f2_voc_sing [label="Jasiu\n/jaɕu/"];
+        style=filled; color="#dbdbdb";
         
-        f3_gen_sing [label="Jonka\n/jɔnka/"];
-        f3_dat_sing [label="Jonkowi\n/jɔnkɔvi/"];
-        f3_acc_sing [label="Jonka\n/jɔnka/"];
-        f3_ins_sing [label="Jonkiem\n/jɔnkjɛm/"];
-        f3_loc_sing [label="Jonku\n/jɔnku/"];
-        f3_pre_sing [label="Jonku\n/jɔnku/"];
-        f3_voc_sing [label="Jonku\n/jɔnku/"];
-
-        f4_gen_sing [label="Johannis\n/joannis/"];
-        f4_dat_sing [label="Johanni\n/joanni/"];
-        f4_acc_sing [label="Johannem\n/joannem/"];
-        f4_abl_sing [label="Johanne\n/joanne/"];
-        f4_voc_sing [label="Johanne\n/joanne/"];
-
-        f5_gen_sing [label="Johanns\n/joːhans/"];
-        f5_dat_sing [label="Johann\n/joːhan/"];
-        f5_acc_sing [label="Johann\n/joːhan/"];
-
-        f6_gen_sing [label="Hansens\n/hanzn̩s/"];
-        f6_dat_sing [label="Hans\n/hans/"];
-        f6_acc_sing [label="Hans\n/hans/"];
-
-        f7_gen_sing [label="Ивана\n/ɪvanə/"];
-        f7_dat_sing [label="Иваnu\n/ɪvanu/"];
-        f7_acc_sing [label="Ивана\n/ɪvanə/"];
-        f7_ins_sing [label="Иваномъ\n/ɪvanəm/"];
-        f7_loc_sing [label="Иванѣ\n/ɪvanʲɛ/"];
-        f7_pre_sing [label="Иванѣ\n/ɪvanʲɛ/"];
-
-        f8_gen_sing [label="Іоанна\n/ɪoannə/"];
-        f8_dat_sing [label="Іоанnu\n/ɪoannu/"];
-        f8_acc_sing [label="Іоанna\n/ɪoannə/"];
-        f8_ins_sing [label="Іоанномъ\n/ɪoannəm/"];
-        f8_loc_sing [label="Іоаннѣ\n/ɪoannʲɛ/"];
-        f8_pre_sing [label="Іоаннѣ\n/ɪoannʲɛ/"];
+        node [style="filled", fillcolor="#e1f5fe", shape=record, penwidth=1, color="black", fontname="Arial", fontsize=14];
+        
+        f1 [label="{ [nom-sing]\nJan\n/jan/ | - | [gen-sing]\nJana\n/jana/ | [dat-sing]\nJanowi\n/janɔvi/ | [acc-sing]\nJana\n/jana/ | [ins-sing]\nJanem\n/janɛm/ | [loc-sing]\nJanie\n/jaɲɛ/ | [pre-sing]\nJanie\n/jaɲɛ/ | [voc-sing]\nJanie\n/jaɲɛ/ }"];
+        f2 [label="{ [nom-sing]\nJaś\n/jaɕ/ | - | [gen-sing]\nJasia\n/jaɕa/ | [dat-sing]\nJasiowi\n/jaɕɔvi/ | [acc-sing]\nJasia\n/jaɕa/ | [ins-sing]\nJasiem\n/jaɕɛm/ | [loc-sing]\nJasiu\n/jaɕu/ | [pre-sing]\nJasiu\n/jaɕu/ | [voc-sing]\nJasiu\n/jaɕu/ }"];
+        f3 [label="{ [nom-sing]\nJonek\n/jɔnɛk/ | - | [gen-sing]\nJonka\n/jɔnka/ | [dat-sing]\nJonkowi\n/jɔnkɔvi/ | [acc-sing]\nJonka\n/jɔnka/ | [ins-sing]\nJonkiem\n/jɔnkjɛm/ | [loc-sing]\nJonku\n/jɔnku/ | [pre-sing]\nJonku\n/jɔnku/ | [voc-sing]\nJonku\n/jɔnku/ }"];
+        f4 [label="{ [nom-sing]\nJohannes\n/joannes/ | - | [gen-sing]\nJohannis\n/joannis/ | [dat-sing]\nJohanni\n/joanni/ | [acc-sing]\nJohannem\n/joannem/ | [abl-sing]\nJohanne\n/joanne/ | [voc-sing]\nJohanne\n/joanne/ }"];
+        f5 [label="{ [nom-sing]\nJohann\n/joːhan/ | - | [gen-sing]\nJohanns\n/joːhans/ | [dat-sing]\nJohann\n/joːhan/ | [acc-sing]\nJohann\n/joːhan/ }"];
+        f6 [label="{ [nom-sing]\nHans\n/hans/ | - | [gen-sing]\nHansens\n/hanzn̩s/ | [dat-sing]\nHans\n/hans/ | [acc-sing]\nHans\n/hans/ }"];
+        f7 [label="{ [nom-sing]\nИванъ\n/ɪvan/ | - | [gen-sing]\nИвана\n/ɪvanə/ | [dat-sing]\nИваnu\n/ɪvanu/ | [acc-sing]\nИвана\n/ɪvanə/ | [ins-sing]\nИваномъ\n/ɪvanəm/ | [loc-sing]\nИванѣ\n/ɪvanʲɛ/ | [pre-sing]\nИванѣ\n/ɪvanʲɛ/ }"];
+        f8 [label="{ [nom-sing]\nІоаннъ\n/ɪoan/ | - | [gen-sing]\nІоанна\n/ɪoannə/ | [dat-sing]\nІоанnu\n/ɪoannu/ | [acc-sing]\nІоанna\n/ɪoannə/ | [ins-sing]\nІоанномъ\n/ɪoannəm/ | [loc-sing]\nІоаннѣ\n/ɪoannʲɛ/ | [pre-sing]\nІоаннѣ\n/ɪoannʲɛ/ }"];
     }
 
-    subgraph cluster_lemma_atomy {
-        label = "ATOMY\nLEMMA:";
-        fontname="Arial Bold";
-        fontsize=20;
-        fontcolor="#4b4b4b";
-        style=filled;
-        color="#dbdbdb";
-        
-        f1_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJan\n/jan/", penwidth=1, color="#ababab"];
-        f2_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJaś\n/jaɕ/", penwidth=1, color="#ababab"];
-        f3_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJonek\n/jɔnɛk/", penwidth=1, color="#ababab"];
-        f4_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJohannes\n/joannes/", penwidth=1, color="#ababab"];
-        f5_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJohann\n/joːhan/", penwidth=1, color="#ababab"];
-        f6_nom_sing [label="lemma\nantroponim\nimię męskie\n\nHans\n/hans/", penwidth=1, color="#ababab"];
-        f7_nom_sing [label="lemma\nantroponim\nimię męskie\n\nИванъ\n/ɪvan/", penwidth=1, color="#ababab"];
-        f8_nom_sing [label="lemma\nantroponim\nimię męskie\n\nІоаннъ\n/ɪoan/", penwidth=1, color="#ababab"];
-    }
 
     node [style="filled,rounded", fillcolor=white, penwidth=1, fontname="Arial"];    
     translacje1 [label="warianty\njęzykowe"];    
@@ -282,38 +227,16 @@ digraph G {
     alloformy3 [label="allonimy\n(alloformy)\nDEU"];
     alloformy4 [label="allonimy\n(alloformy)\nROS"];
 
-    fleksje1 [label="fleksje"];
-    fleksje2 [label="fleksje"];
-    fleksje3 [label="fleksje"];
-    fleksje4 [label="fleksje"];
-    fleksje5 [label="fleksje"];
-    fleksje6 [label="fleksje"];
-    fleksje7 [label="fleksje"];
-    fleksje8 [label="fleksje"];
+    translacje1 -> {alloformy1 alloformy2 alloformy3 alloformy4} [dir=both]; 
 
-    translacje1 -> {alloformy1 alloformy2 alloformy3 alloformy4} [dir=both];    
-    alloformy1 -> {f1_nom_sing f2_nom_sing f3_nom_sing} [dir=both];
-    alloformy2 -> {f4_nom_sing} [dir=both];
-    alloformy3 -> {f5_nom_sing f6_nom_sing} [dir=both];
-    alloformy4 -> {f7_nom_sing f8_nom_sing} [dir=both];
-
-    f1_nom_sing -> fleksje1 [dir=both];
-    f2_nom_sing -> fleksje2 [dir=both];
-    f3_nom_sing -> fleksje3 [dir=both];
-    f4_nom_sing -> fleksje4 [dir=both];
-    f5_nom_sing -> fleksje5 [dir=both];
-    f6_nom_sing -> fleksje6 [dir=both];
-    f7_nom_sing -> fleksje7 [dir=both];
-    f8_nom_sing -> fleksje8 [dir=both];
-
-    fleksje1 -> { f1_gen_sing f1_dat_sing f1_acc_sing f1_ins_sing f1_loc_sing f1_pre_sing f1_voc_sing };
-    fleksje2 -> { f2_gen_sing f2_dat_sing f2_acc_sing f2_ins_sing f2_loc_sing f2_pre_sing f2_voc_sing };
-    fleksje3 -> { f3_gen_sing f3_dat_sing f3_acc_sing f3_ins_sing f3_loc_sing f3_pre_sing f3_voc_sing };
-    fleksje4 -> { f4_gen_sing f4_dat_sing f4_acc_sing f4_abl_sing f4_voc_sing };
-    fleksje5 -> { f5_gen_sing f5_dat_sing f5_acc_sing };
-    fleksje6 -> { f6_gen_sing f6_dat_sing f6_acc_sing };
-    fleksje7 -> { f7_gen_sing f7_dat_sing f7_acc_sing f7_ins_sing f7_loc_sing f7_pre_sing };
-    fleksje8 -> { f8_gen_sing f8_dat_sing f8_acc_sing f8_ins_sing f8_loc_sing f8_pre_sing };
+    alloformy1 -> { f1 } [dir=both];
+    alloformy1 -> { f2 } [dir=both];
+    alloformy1 -> { f3 } [dir=both];
+    alloformy2 -> { f4 } [dir=both];
+    alloformy3 -> { f5 } [dir=both];
+    alloformy3 -> { f6 } [dir=both];
+    alloformy4 -> { f7 } [dir=both];
+    alloformy4 -> { f8 } [dir=both];
 }
 ```
 
