@@ -353,119 +353,119 @@ Na podstawie schematu modelu danych **Gramps 6.0.0-beta.2** (v.2025-02-27), oto 
 
 ---
 
-#### 1. EDYTOR NOTATEK
+#### **E3:**-1. EDYTOR NOTATEK
 
 * **Pola:** prywatność (tak/nie), identyfikator, rodzaj notatki [text], notatka [text] preformatowany.
-* **Powiązania:** tagi /etykietki (), notatki (), rodzina (), zdarzenia (), lokalizacje (), repozytoria (), linki (), cytaty (), źródła (), media (), osoba ().
+* **Powiązania:** tagi /etykietki (**∞**), notatki (**∞**), rodzina (**∞**), zdarzenia (**∞**), lokalizacje (**∞**), repozytoria (**∞**), linki (**∞**), cytaty (**∞**), źródła (**∞**), media (**∞**), osoba (**∞**).
 
-#### 2. EDYTOR ŹRÓDEŁ: CYTATY
+#### **E3:**-2. EDYTOR ŹRÓDEŁ: CYTATY
 
 * **Pola:** prywatność [tak/nie], tom/strona [text], zaufanie [poziom], data/okres/przedział, kolejność atrybutów, kolejność obiektów/foto, kolejność notatek.
-* **Powiązania:** źródło (**1**), atrybuty / cechy (), odwołanie do obiekt. (), tagi / etykietki (), linki do notatek ().
+* **Powiązania:** źródło (**1**), atrybuty / cechy (**∞**), odwołanie do obiekt. (**∞**), tagi / etykietki (**∞**), linki do notatek (**∞**).
 
-#### 3. EDYTOR ŹRÓDEŁ: ŹRÓDŁA WŁAŚCIWE
+#### **E3:**-3. EDYTOR ŹRÓDEŁ: ŹRÓDŁA WŁAŚCIWE
 
 * **Pola:** identyfikator, zaufanie [poziom], tytuł [text], autor [text], info o publikacji [text], streszczenie/opis [text], kolejność repozytoriów.
-* **Powiązania:** atrybuty / cechy (), tagi / etykietki (), repozytoria ().
+* **Powiązania:** atrybuty / cechy (**∞**), tagi / etykietki (**∞**), repozytoria (**∞**).
 
-#### 4. EDYTOR ŹRÓDEŁ: ZAGNIEŻDŻANIA W REPOZYTORIACH
+#### **E3:**-4. EDYTOR ŹRÓDEŁ: ZAGNIEŻDŻANIA W REPOZYTORIACH
 
 * **Pola:** prywatność (tak/nie), rodzaj obiektu [text], identyfikator źródła w repozytorium [text], kolejność notatek.
-* **Powiązania:** repozytorium (**1**), linki do notatek ().
+* **Powiązania:** repozytorium (**1**), linki do notatek (**∞**).
 
-#### 5. EDYTOR ŹRÓDEŁ: REPOZYTORIA
+#### **E3:**-5. EDYTOR ŹRÓDEŁ: REPOZYTORIA
 
 * **Pola:** prywatność (tak/nie), nazwa [text], identyfikator, kolejność adresów, kolejność internetowych linków, kolejność notatek.
-* **Powiązania:** tagi / etykietki (), adresy repozytorium (), linki internetowe (), linki do notatek ().
+* **Powiązania:** tagi / etykietki (**∞**), adresy repozytorium (**∞**), linki internetowe (**∞**), linki do notatek (**∞**).
 
-#### 6. EDYTOR ZDARZEŃ
+#### **E3:**-6. EDYTOR ZDARZEŃ
 
 * **Pola:** prywatność (tak/nie), rodzaj zdarzenia [text], krótki opis [text], identyfikator, data/okres/przedział, kolejność atrybutów, kolejność obiektów/foto, kolejność cytatów, kolejność notatek.
-* **Powiązania:** lokalizacja (**1**), atrybuty / cechy (), odwołanie do obiektów (), tagi / etykietki (), linki cytatów źródłowych (), linki do notatek ().
+* **Powiązania:** lokalizacja (**1**), atrybuty / cechy (**∞**), odwołanie do obiektów (**∞**), tagi / etykietki (**∞**), linki cytatów źródłowych (**∞**), linki do notatek (**∞**).
 
-#### 7. EDYTOR MIEJSC
+#### **E3:**-7. EDYTOR MIEJSC
 
 * **Pola:** prywatność (tak/nie), rodzaj miejsca [text], współrzędne geograficzne, kod pocztowy, identyfikator, kolejność nazw, kolejność internetowych l., kolejność notatek, kolejność cytatów, kolejność zawierających, kolejność obiektów/foto.
-* **Powiązania:** nazwa preferowana (**1**), nazwy alternatywne (), tagi /etykietki (), linki internetowe (), linki do notatek (), linki cytatów źródłowych (), zawiera się w .. (), odwołanie do obiektów ().
+* **Powiązania:** nazwa preferowana (**1**), nazwy alternatywne (**∞**), tagi /etykietki (**∞**), linki internetowe (**∞**), linki do notatek (**∞**), linki cytatów źródłowych (**∞**), zawiera się w .. (**∞**), odwołanie do obiektów (**∞**).
 
-#### 8. EDYTOR ZDARZEŃ: (ODWOŁANIA DO)
+#### **E3:**-8. EDYTOR ZDARZEŃ: (ODWOŁANIA DO)
 
 * **Pola:** charakter udziału osoby/rodziny w zdarzeniu [text], prywatność (tak/nie), kolejność atrybutów, kolejność cytatów, kolejność notatek.
-* **Powiązania:** atrybuty / cechy (), zdarzenie (**1**), linki cytatów źródłowych (), linki do notatek ().
+* **Powiązania:** atrybuty / cechy (**∞**), zdarzenie (**1**), linki cytatów źródłowych (**∞**), linki do notatek (**∞**).
 
-#### 9. EDYTOR RODZINY
+#### **E3:**-9. EDYTOR RODZINY
 
 * **Pola:** prywatność (tak/nie), kolejność dzieci, identyfikator, kolejność cytatów, kolejność notatek, kolejność zdarzeń, kolejność atrybutów, kolejność obiektów/foto.
-* **Powiązania:** ojciec / mąż / partner (**1**), matka / żona / partnerka (**1**), relacja rodziców i dziecka (), linki cytatów źródłowych (), linki do notatek (), odwołanie do zdarzeń (), atrybuty / cechy (), tagi / etykietki (), odwołanie do obiektów ().
+* **Powiązania:** ojciec / mąż / partner (**1**), matka / żona / partnerka (**1**), relacja rodziców i dziecka (**∞**), linki cytatów źródłowych (**∞**), linki do notatek (**∞**), odwołanie do zdarzeń (**∞**), atrybuty / cechy (**∞**), tagi / etykietki (**∞**), odwołanie do obiektów (**∞**).
 
-#### 10. EDYTOR RODZINY: RELACJA RODZICÓW Z DZIECKIEM
+#### **E3:**-10. EDYTOR RODZINY: RELACJA RODZICÓW Z DZIECKIEM
 
 * **Pola:** relacja z ojcem [text], relacja z matką [text], prywatność (tak/nie), kolejność cytatów, kolejność notatek.
-* **Powiązania:** dziecko (**1**), linki cytatów źródłowych (), linki do notatek ().
+* **Powiązania:** dziecko (**1**), linki cytatów źródłowych (**∞**), linki do notatek (**∞**).
 
-#### 11. EDYTOR OSOBY
+#### **E3:**-11. EDYTOR OSOBY
 
 * **Pola:** prywatność (tak/nie), płeć (♂/♀/⚥), identyfikator, kolejność nazw, kolejność notatek, kolejność obiektów/foto, kolejność adresów, kolejność internetowych l., kolejność atrybutów, kolejność zdarzeń.
-* **Powiązania:** nazwa preferowana (**1**), nazwy alternatywne (), linki do notatek (), (obiekt) portret osoby (**1**), odwołanie do obiektów (), tagi /etykietki (), adresy osoby (), linki internetowe (), atrybuty / cechy (), odwołanie do zdarzeń ().
+* **Powiązania:** nazwa preferowana (**1**), nazwy alternatywne (**∞**), linki do notatek (**∞**), (obiekt) portret osoby (**1**), odwołanie do obiektów (**∞**), tagi /etykietki (**∞**), adresy osoby (**∞**), linki internetowe (**∞**), atrybuty / cechy (**∞**), odwołanie do zdarzeń (**∞**).
 
-#### 12. EDYTOR OSOBY: NAZEWNICTWO
+#### **E3:**-12. EDYTOR OSOBY: NAZEWNICTWO
 
 * **Pola:** prywatność (tak/nie), rodzaj nazwy [text], imiona [text], imię używane [text], tytuł [text], przyrostek [text], przezwisko [text], przezwisko rodowe [text], grupuj jako [text], sortuj jako, wyświetl jako, kolejność członów nazwy, data/okres/przedział.
-* **Powiązania:** człony nazwy ().
+* **Powiązania:** człony nazwy (**∞**).
 
-#### 13. EDYTOR OSOBY: CZŁON NAZWY
+#### **E3:**-13. EDYTOR OSOBY: CZŁON NAZWY
 
 * **Pola:** człon podstawowy (tak/nie), prefiks członu [text], człon [text], sufiks członu i łącznik z następnym członem [text], kategoria członu nazwy np. pochodzenie [text].
 * **Powiązania:** (brak pól referencyjnych z liczbami na czarnym tle).
 
-#### 14. EDYTOR OSOBY: ZALEŻNOŚCI MIĘDZY OSOBAMI
+#### **E3:**-14. EDYTOR OSOBY: ZALEŻNOŚCI MIĘDZY OSOBAMI
 
 * **Pola:** prywatność (tak/nie), nazwa zależności [text], kolejność cytatów, kolejność notatek.
-* **Powiązania:** wybrana osoba (**1**), linki cytatów źródłowych (), linki do notatek ().
+* **Powiązania:** wybrana osoba (**1**), linki cytatów źródłowych (**∞**), linki do notatek (**∞**).
 
-#### 15. EDYTOR ATRYBUTÓW / CECH
+#### **E3:**-15. EDYTOR ATRYBUTÓW / CECH
 
 * **Pola:** nazwa atrybutu [text], zawartość atrybutu [text], prywatność (tak/nie), kolejność cytatów, kolejność notatek.
-* **Powiązania:** linki cytatów źródłowych (), linki do notatek ().
+* **Powiązania:** linki cytatów źródłowych (**∞**), linki do notatek (**∞**).
 
-#### 16. EDYTOR ETYKIET / TAGÓW
+#### **E3:**-16. EDYTOR ETYKIET / TAGÓW
 
 * **Pola:** nazwa tagu, kolor tagu.
 * **Powiązania:** (brak pól referencyjnych wychodzących).
 
-#### 17. EDYTOR FOTO / OBIEKTÓW / MEDIÓW: (ODWOŁANIA DO)
+#### **E3:**-17. EDYTOR FOTO / OBIEKTÓW / MEDIÓW: (ODWOŁANIA DO)
 
 * **Pola:** prywatność (tak/nie), zaznaczony obszar na zdjęciu narożniki [ramka], kolejność cytatów, kolejność notatek, kolejność atrybutów.
-* **Powiązania:** obiekt / zdjęcie (**1**), linki cytatów źródłowych (), linki do notatek (), atrybuty / cechy ().
+* **Powiązania:** obiekt / zdjęcie (**1**), linki cytatów źródłowych (**∞**), linki do notatek (**∞**), atrybuty / cechy (**∞**).
 
-#### 18. EDYTOR ADRESÓW: (FIZYCZNYCH)
+#### **E3:**-18. EDYTOR ADRESÓW: (FIZYCZNYCH)
 
 * **Pola:** ulica [text], miasto [text], kod pocztowy, powiat/woj., kraj [text], prywatność (tak/nie), telefon [text], data/okres/przedział, kolejność notatek, kolejność cytatów.
-* **Powiązania:** linki do notatek (), l. cytatów źródłowych ().
+* **Powiązania:** linki do notatek (**∞**), l. cytatów źródłowych (**∞**).
 
-#### 19. EDYTOR MIEJSC: (ZAWIERAJACYCH SIĘ)
+#### **E3:**-19. EDYTOR MIEJSC: (ZAWIERAJACYCH SIĘ)
 
 * **Pola:** data/okres/przedział.
 * **Powiązania:** miejsce (**1**).
 
-#### 20. EDYTOR MIEJSC: NAZWY MIEJSCA
+#### **E3:**-20. EDYTOR MIEJSC: NAZWY MIEJSCA
 
 * **Pola:** nazwa miejsca [text], język [ISO 639-1:2002], data/okres/przedział.
 * **Powiązania:** (brak pól referencyjnych wychodzących).
 
-#### 21. EDYTOR MIEJSC: ALTERNATYWNE ADRESY
+#### **E3:**-21. EDYTOR MIEJSC: ALTERNATYWNE ADRESY
 
 * **Pola:** ulica [text], kod, miasto [text], telefon [text], parafia [text], powiat [text], wojew. [text], kraj.
 * **Powiązania:** (brak pól referencyjnych wychodzących).
 
-#### 22. EDYTOR ADRESÓW: (INTERNETOWYCH)
+#### **E3:**-22. EDYTOR ADRESÓW: (INTERNETOWYCH)
 
 * **Pola:** prywatny (tak/nie), rodzaj linku [text], opis linku [text], link [text].
 * **Powiązania:** (brak pól referencyjnych wychodzących).
 
-#### 23. EDYTOR FOTO / OBIEKTÓW / MEDIÓW
+#### **E3:**-23. EDYTOR FOTO / OBIEKTÓW / MEDIÓW
 
 * **Pola:** prywatność (tak/nie), identyfikator, tytuł [text], ścieżka [text], data/okres/przedział, kolejność cytatów, kolejność notatek.
-* **Powiązania:** tagi / etykietki (), l. cytatów źródłowych (), linki do notatek ().
+* **Powiązania:** tagi / etykietki (**∞**), l. cytatów źródłowych (**∞**), linki do notatek (**∞**).
 
 ---
