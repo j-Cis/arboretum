@@ -138,7 +138,7 @@ digraph G {
     node [style=filled, color=white];
     
     atom_model [label="ATOM", penwidth=2, fillcolor="#e1f5fe"];
-    atom_section [label="GRAFIA: TEXT | FONIA: IPA | FONIA: BM-SOUNDEX | FONIA: DM-SOUNDEX", shape=record];
+    atom_section [label="GRAFIA: TEXT | FONIA: IPA | FONIA: DM-SOUNDEX", shape=record];
     atom_section -> atom_model;
   }
 
@@ -209,15 +209,18 @@ digraph G {
         
         node [style="filled", fillcolor="#e1f5fe", shape=record, penwidth=1, color="black", fontname="Arial", fontsize=14];
         
-        f1 [label="{ [nom-sing]\nJan\n/jan/ | - | [gen-sing]\nJana\n/jana/ | [dat-sing]\nJanowi\n/janɔvi/ | [acc-sing]\nJana\n/jana/ | [ins-sing]\nJanem\n/janɛm/ | [loc-sing]\nJanie\n/jaɲɛ/ | [pre-sing]\nJanie\n/jaɲɛ/ | [voc-sing]\nJanie\n/jaɲɛ/ }"];
-        f2 [label="{ [nom-sing]\nJaś\n/jaɕ/ | - | [gen-sing]\nJasia\n/jaɕa/ | [dat-sing]\nJasiowi\n/jaɕɔvi/ | [acc-sing]\nJasia\n/jaɕa/ | [ins-sing]\nJasiem\n/jaɕɛm/ | [loc-sing]\nJasiu\n/jaɕu/ | [pre-sing]\nJasiu\n/jaɕu/ | [voc-sing]\nJasiu\n/jaɕu/ }"];
-        f3 [label="{ [nom-sing]\nJonek\n/jɔnɛk/ | - | [gen-sing]\nJonka\n/jɔnka/ | [dat-sing]\nJonkowi\n/jɔnkɔvi/ | [acc-sing]\nJonka\n/jɔnka/ | [ins-sing]\nJonkiem\n/jɔnkjɛm/ | [loc-sing]\nJonku\n/jɔnku/ | [pre-sing]\nJonku\n/jɔnku/ | [voc-sing]\nJonku\n/jɔnku/ }"];
-        f4 [label="{ [nom-sing]\nJohannes\n/joannes/ | - | [gen-sing]\nJohannis\n/joannis/ | [dat-sing]\nJohanni\n/joanni/ | [acc-sing]\nJohannem\n/joannem/ | [abl-sing]\nJohanne\n/joanne/ | [voc-sing]\nJohanne\n/joanne/ }"];
-        f5 [label="{ [nom-sing]\nJohann\n/joːhan/ | - | [gen-sing]\nJohanns\n/joːhans/ | [dat-sing]\nJohann\n/joːhan/ | [acc-sing]\nJohann\n/joːhan/ }"];
-        f6 [label="{ [nom-sing]\nHans\n/hans/ | - | [gen-sing]\nHansens\n/hanzn̩s/ | [dat-sing]\nHans\n/hans/ | [acc-sing]\nHans\n/hans/ }"];
-        f7 [label="{ [nom-sing]\nИванъ\n/ɪvan/ | - | [gen-sing]\nИвана\n/ɪvanə/ | [dat-sing]\nИваnu\n/ɪvanu/ | [acc-sing]\nИвана\n/ɪvanə/ | [ins-sing]\nИваномъ\n/ɪvanəm/ | [loc-sing]\nИванѣ\n/ɪvanʲɛ/ | [pre-sing]\nИванѣ\n/ɪvanʲɛ/ }"];
-        f8 [label="{ [nom-sing]\nІоаннъ\n/ɪoan/ | - | [gen-sing]\nІоанна\n/ɪoannə/ | [dat-sing]\nІоанnu\n/ɪoannu/ | [acc-sing]\nІоанna\n/ɪoannə/ | [ins-sing]\nІоанномъ\n/ɪoannəm/ | [loc-sing]\nІоаннѣ\n/ɪoannʲɛ/ | [pre-sing]\nІоаннѣ\n/ɪoannʲɛ/ }"];
+       
+        f1 [label="{ [nom-sing]\nJan\n/jan/\n(520600) | - | [gen-sing]\nJana\n/jana/\n(520600) | [dat-sing]\nJanowi\n/janɔvi/\n(520600) | [acc-sing]\nJana\n/jana/\n(520600) | [ins-sing]\nJanem\n/janɛm/\n(520600) | [loc-sing]\nJanie\n/jaɲɛ/\n(520600) | [pre-sing]\nJanie\n/jaɲɛ/\n(520600) | [voc-sing]\nJanie\n/jaɲɛ/\n(520600) }"];
+        f2 [label="{ [nom-sing]\nJaś\n/jaɕ/\n(520600) | - | [gen-sing]\nJasia\n/jaɕa/\n(520600) | [dat-sing]\nJasiowi\n/jaɕɔvi/\n(520600) | [acc-sing]\nJasia\n/jaɕa/\n(520600) | [ins-sing]\nJasiem\n/jaɕɛm/\n(520600) | [loc-sing]\nJasiu\n/jaɕu/\n(520600) | [pre-sing]\nJasiu\n/jaɕu/\n(520600) | [voc-sing]\nJasiu\n/jaɕu/\n(520600) }"];
+        f3 [label="{ [nom-sing]\nJonek\n/jɔnɛk/\n(520600) | - | [gen-sing]\nJonka\n/jɔnka/\n(520600) | [dat-sing]\nJonkowi\n/jɔnkɔvi/\n(520600) | [acc-sing]\nJonka\n/jɔnka/\n(520600) | [ins-sing]\nJonkiem\n/jɔnkjɛm/\n(520600) | [loc-sing]\nJonku\n/jɔnku/\n(520600) | [pre-sing]\nJonku\n/jɔnku/\n(520600) | [voc-sing]\nJonku\n/jɔnku/\n(520600) }"];
+        f4 [label="{ [nom-sing]\nJohannes\n/joannes/\n(520600) | - | [gen-sing]\nJohannis\n/joannis/\n(520600) | [dat-sing]\nJohanni\n/joanni/\n(520600) | [acc-sing]\nJohannem\n/joannem/\n(520600) | [abl-sing]\nJohanne\n/joanne/\n(520600) | [voc-sing]\nJohanne\n/joanne/\n(520600) }"];
+        f5 [label="{ [nom-sing]\nJohann\n/joːhan/\n(520600) | - | [gen-sing]\nJohanns\n/joːhans/\n(520600) | [dat-sing]\nJohann\n/joːhan/\n(520600) | [acc-sing]\nJohann\n/joːhan/\n(520600) }"];
+        f6 [label="{ [nom-sing]\nHans\n/hans/\n(520600) | - | [gen-sing]\nHansens\n/hanzn̩s/\n(520600) | [dat-sing]\nHans\n/hans/\n(520600) | [acc-sing]\nHans\n/hans/\n(520600) }"];
+        f7 [label="{ [nom-sing]\nИванъ\n/ɪvan/\n(520600) | - | [gen-sing]\nИвана\n/ɪvanə/\n(520600) | [dat-sing]\nИваnu\n/ɪvanu/\n(520600) | [acc-sing]\nИвана\n/ɪvanə/\n(520600) | [ins-sing]\nИваномъ\n/ɪvanəm/\n(520600) | [loc-sing]\nИванѣ\n/ɪvanʲɛ/\n(520600) | [pre-sing]\nИванѣ\n/ɪvanʲɛ/\n(520600) }"];
+        f8 [label="{ [nom-sing]\nІоаннъ\n/ɪoan/\n(520600) | - | [gen-sing]\nІоанна\n/ɪoannə/\n(520600) | [dat-sing]\nІоанnu\n/ɪoannu/\n(520600) | [acc-sing]\nІоанna\n/ɪoannə/\n(520600) | [ins-sing]\nІоанномъ\n/ɪoannəm/\n(520600) | [loc-sing]\nІоаннѣ\n/ɪoannʲɛ/\n(520600) | [pre-sing]\nІоаннѣ\n/ɪoannʲɛ/\n(520600) }"];
     }
+
+   
 
 
     node [style="filled,rounded", fillcolor=white, penwidth=1, fontname="Arial"];    
