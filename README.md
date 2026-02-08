@@ -345,3 +345,5 @@ Na osobnej karcie mamy zarządzanie materiałami źródłowymi oraz Wspomnieniam
 Natomiast na karcie źródła, `w dodawaniu nowego` podajemy datę, tytuł, rodzaj `url strony internetowej` albo `wspomnienie`, następnie mamy treść cytatu, uwagi, uzasadnienie, i etykiety czego to dotyczy: Imie i nazwisko, Płeć, Narodziny, Chrzest, Śmierć, Pochówek.; DOdatkowo mamy przechowywalnie źródeł `https://www.familysearch.org/pl/tree/sources/sourceBox` z której możemy istniejące źródło, dołaczyć do profilu. w każdym źródle mamy też uzasadnienie i historie edycji.
 
 ### 🏗️**E3:**  _Gramps_
+
+![E3](https://raw.githubusercontent.com/mod-by-cis/gramps-data-model/refs/heads/main/gramps-6.0.0_MODEL_(pol).svg)
