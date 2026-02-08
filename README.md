@@ -1,79 +1,356 @@
 
-# ARBORETUM 🎗️
+# [🎗️ ARBORETUM](https://github.com/j-Cis/arboretum#)
 
-`Arboretum 🎗️` - będzie to zestaw narzędzi dla `genealoga` czy `pasjonata historii rodzinnej` ale nie takiego traktującego genealogię jak dobrą zabawę - lecz podchodzącym do tematu w sposób badawczy!
+**🎗️ Arboretum** → zestaw narzędzi dla osób podchodzących w sposób badawczy/merytoryczny do sieci relacji międzyludzkich. Jeśli genealgia czy genealogia genetyczna są dla ciebie „_dobrą zabawą_” — wybacz raczej nie mieścisz się w puli adresatów projektu.
 
-_**Po co kolejny program? - przecież jest ich tak wiele!** - otóż nie! Spośród dostępnych na rynku programów - a długo szukałem / czkeałem, ponad 10 lat - nie istnieje żaden w pełni odpowiadający moim oczekiwaniom. Stąd też głównym adresatem niniejszego rozwiązania, jestem ja sam._
+**🎗️ Arboretum** → 
 
-_**Istniejące programy, mają ogromny problem z wydajnością.** Dla przykładu pół miliona osób w `GRAMPS` (napisany w `Python`) daje bazę `sqlite.db` o rozmiarze `3.66 GB` czas otwierania, i manipulacji na danych jest niebotycznie duży. **`Arboretum 🎗️` ma być szybsze, nie tylko przez szybszą technologię użytą, ale także przez zmianę metodyki działań.**_
+---
 
-`Arboretum 🎗️` będzie się składało nie tak jak powszechnie przyjęte - z baz użytkowników - ale dodatkowo trzonem będą bazy systemowe.
+## ✳️**A:**  _Stack_
 
-Bazy będą maksymalnie zatomizowane a zarazem uporządkowane bardziej niż w modelu GRAMPS.
+| Dev | Target |
+| :--- | :--- |
+| Windows 11 (x64) / i7 | Windows (Modern/Legacy), Linux, macOS, iOS, Android |
 
-Brak kosztownych operacji `JOIN` znanych z `SQL`, model bazy jest grafowy! Z Hipergrafami osiągniętymi przez reifikacje Krawędzi - czyli uznanie że Hiperkrawędź też jest Węzłem. (W SurrealDB jest to banalnie proste i wydajne, bo Surreal pozwala przechowywać tablice linków (Array of Record IDs) bezpośrednio w rekordzie.)
+1. [![Rust](https://img.shields.io/badge/Rust%20-v1.93.0%20%7C%20edition%202024-b8744a.svg?logo=rust&logoColor=white)](https://www.rust-lang.org/)
+[![Slint](https://img.shields.io/badge/Slint%20-v1.15.0-5379f4.svg?logo=slint&logoColor=white)](https://slint.dev/)
+[![Egui](https://img.shields.io/badge/Egui%20-v0.33.3-6a759f.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMS4zIDMuN2wtMS0xYy0uNC0uNC0xLS40LTEuNCAwbC0xNSAxNXYzLjVoMy41bDE1LTE1Yy40LS40LjQtMSAwLTEuNHptLTE2IDE0LjVoLS41di0uNWwxMi0xMi41LjUuNS0xMiAxMi41eiIvPjwvc3ZnPg==&logoColor=white)](https://www.egui.rs/)
+[![Egui_Graphs](https://img.shields.io/badge/Egui_Graphs%20-v0.20.0-6a759f.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMS4zIDMuN2wtMS0xYy0uNC0uNC0xLS40LTEuNCAwbC0xNSAxNXYzLjVoMy41bDE1LTE1Yy40LS40LjQtMSAwLTEuNHptLTE2IDE0LjVoLS41di0uNWwxMi0xMi41LjUuNS0xMiAxMi41eiIvPjwvc3ZnPg==&logoColor=white)](https://github.com/blitzarx1/egui_graphs)
+[![Egui-Graph-Edit](https://img.shields.io/badge/Egui%20Graph%20Edit%20-v0.7.1-6a759f.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMS4zIDMuN2wtMS0xYy0uNC0uNC0xLS40LTEuNCAwbC0xNSAxNXYzLjVoMy41bDE1LTE1Yy40LS40LjQtMSAwLTEuNHptLTE2IDE0LjVoLS41di0uNWwxMi0xMi41LjUuNS0xMiAxMi41eiIvPjwvc3ZnPg==&logoColor=white)](https://crates.io/crates/egui-graph-edit)
+[![Polars](https://img.shields.io/badge/Polars%20-v0.52.0-3078d0.svg?logo=polars&logoColor=white)](https://crates.io/crates/polars)
+[![SurrealDB](https://img.shields.io/badge/SurrealDB%20-v2.6%20(embedded:%20kv--surrealkv)-b358a5.svg?logo=surrealdb&logoColor=white)](https://surrealdb.com/)
+[![Tokio](https://img.shields.io/badge/Tokio%20-v1.49.0-3b6a7f.svg?logo=tokio&logoColor=white)](https://tokio.rs/)
+[![Tracing](https://img.shields.io/badge/Tracing%20-v0.1.44-3b6a7f.svg?logo=tokio&logoColor=white)](https://crates.io/crates/tracing)
 
-Architektura oparta na współdzielonym stanie konfiguracyjnym. Wydajna dzięki plikom konfiguracyjnym w formacie CBOR (Concise Binary Object Representation) lub Bincode (bardzo szybki, specyficzny dla Rusta), zamiast parsowania tekstu (TOML/XML/JSON) w czasie rzeczywistym między procesami. Traktuje plik konfiguracyjny jako "token" przekazywania stanu. Atomowy zapis pliku konfiguracyjnego (tempfile + std::fs::rename) - eliminujący błędy związane z np utratą zasilania..; Singleton na poziomie aplikacji (fslock / named-lock).
+2. [![thiserror](https://img.shields.io/badge/thiserror%20-v2.0.18-80495c.svg)](https://crates.io/crates/thiserror)
+[![anyhow](https://img.shields.io/badge/anyhow%20-v1.0.101-80495c.svg)](https://crates.io/crates/anyhow)
+[![console-subscriber](https://img.shields.io/badge/tokio%20console--subscriber%20-v0.5.0-80495c.svg)](https://crates.io/crates/console-subscriber)
+[![color-eyre](https://img.shields.io/badge/color--eyre%20-v0.6.5-80495c.svg)](https://crates.io/crates/color-eyre)
+[![dashmap](https://img.shields.io/badge/dashmap%20-6.1.0-81459a.svg)](https://crates.io/crates/dashmap)
+[![fslock](https://img.shields.io/badge/fslock%20-v0.2.1-4a459a.svg)](https://crates.io/crates/fslock)
+[![named-lock](https://img.shields.io/badge/named--lock%20-v0.4.1-4a459a.svg)](https://crates.io/crates/named-lock)
+[![notify](https://img.shields.io/badge/notify%20-v8.2.0-4a459a.svg)](https://crates.io/crates/notify)
+[![directories](https://img.shields.io/badge/directories%20-v6.0.0-4a459a.svg)](https://crates.io/crates/directories)
+[![tempfile](https://img.shields.io/badge/tempfile%20-v3.24.0-4a459a.svg)](https://stebalien.com/projects/tempfile-rs/)
+[![fs2](https://img.shields.io/badge/fs2%20-v0.4.3-4a459a.svg)](https://crates.io/crates/fs2)
+[![rfd](https://img.shields.io/badge/rfd%20-v0.17.2-3280ae.svg)](https://crates.io/crates/rfd)
+[![clap](https://img.shields.io/badge/clap%20-v4.5.57-3280ae.svg)](https://crates.io/crates/clap)
+[![inquire](https://img.shields.io/badge/inquire%20-v0.9.3-3280ae.svg)](https://crates.io/crates/inquire)
+[![colored](https://img.shields.io/badge/colored%20-v3.1.1-3280ae.svg)](https://crates.io/crates/colored)
+[![bincode](https://img.shields.io/badge/bincode%20-v3.0.0-41a99d.svg)](https://crates.io/crates/bincode)
+[![ciborium](https://img.shields.io/badge/ciborium%20-v0.2.2-41a99d.svg)](https://crates.io/crates/ciborium)
+[![serde](https://img.shields.io/badge/serde%20-v1.56.0-41a97f.svg)](https://serde.rs/)
+[![uuid](https://img.shields.io/badge/uuid%20-v1.20.0-41a97f.svg)](https://crates.io/crates/uuid)
+[![petgraph](https://img.shields.io/badge/petgraph%20-v0.8.3-4f7a4a.svg)](https://crates.io/crates/petgraph)
+[![rayon](https://img.shields.io/badge/rayon%20-v1.11.0-4f7a4a.svg)](https://crates.io/crates/rayon)
+[![nom](https://img.shields.io/badge/nom%20-v8.0.0-6e7a4a.svg)](https://crates.io/crates/nom)
+[![winnow](https://img.shields.io/badge/winnow%20-v0.7.14-6e7a4a.svg)](https://crates.io/crates/winnow)
+[![jiff](https://img.shields.io/badge/jiff%20-v0.2.19-959537.svg)](https://crates.io/crates/jiff)
+[![chrono](https://img.shields.io/badge/chrono%20-v0.4.43-959537.svg)](https://crates.io/crates/chrono)
+[![validator](https://img.shields.io/badge/validator%20-v0.20.0-937b29.svg)](https://crates.io/crates/validator)
 
-> [![Rust](https://img.shields.io/badge/Rust-1.93.0%20%7C%20edition%202024-dca282.svg?logo=rust&logoColor=white)](https://rust-lang.org/) - główny język.
->
-> (jeszcze nie cały) stos technologiczny w Rust (Pure Rust),:
->
-> [![SurrealDB](https://img.shields.io/badge/SurrealDB%20-2.6%20(embedded:%20kv--surrealkv)-ff00a0.svg?logo=surrealdb&logoColor=white)](https://surrealdb.com/) - baza danych
-> > SurrealKV dla pojedynczej bazy ma następującą strukturę plików
-> > 
-> > ```plaintext
-> > ├──┬ 📂 clog/
-> > │  └── 📄 00000000000000000000.clog
-> > └──┬ 📂 manifest/
-> >    └── 📄 00000000000000000000.manifest
-> >  ```
-> > 
-> > nie mamy tu jak w SQLite plików z rozszerzeniem `*.db`
->
-> [![Slint](https://img.shields.io/badge/Slint-1.15.0-4c4cff.svg?logo=slint&logoColor=white)](https://slint.dev/) - interfejs graficzny
->
-> inquire "0.9.3", colored "3.1.1", clap "4.5.16" - interfejs terminala/konsoli
->
-> tokio "1.49.0" - obsługa asynchroniczności
->
-> serde "1.0.218", serde_json "1.0", uuid "1.10.0" - serializacja i identyfikacja
->
-> thiserror "2.0.1", anyhow "1.0", tracing "0.1", tracing-subscriber "0.3" - śledzenie błędów
->
-> chrono, jiff - manipulacja formatem wyświetlanego czasu.
->
-> strsim, phonetic,tantivy - Przetwarzanie Tekstu i Wyszukiwanie
->
-> nom, winnow - parsowanie tagów
->
-> tarpc, interprocess - Komunikacja między binarkami
->
-> petgraph - manipulacja na grafach
->
-> geo, geozero - geolokalizacja
->
-> directories, fs2, fslock, notify - Zarządzanie Plikami i Konfiguracją
->
-> ring, argon2 - Bezpieczeństwo i Kryptografia (Opcjonalne)
->
-> rfd - specyficzne narzędzia dla SLINT, dialog wyboru plików.
->
-> tempfile, named-lock, 
+3. ?  [![strsim](https://img.shields.io/badge/strsim%20-v0.11.1-303131.svg)](https://crates.io/crates/strsim)
+[![tantivy](https://img.shields.io/badge/tantivy%20-v0.25.0-303131.svg)](https://crates.io/crates/tantivy)
+[![tarpc](https://img.shields.io/badge/tarpc%20-v0.37.0-292b2c.svg)](https://crates.io/crates/tarpc)
+[![interprocess](https://img.shields.io/badge/interprocess%20-v2.3.0-292b2c.svg)](https://crates.io/crates/interprocess)
+[![self_update](https://img.shields.io/badge/self_update%20-v0.42.0-192b2c.svg)](https://crates.io/crates/self_update)
+[![plotters](https://img.shields.io/badge/plotters%20-v0.3.7-293b2c.svg)](https://crates.io/crates/plotters)
+[![layout-rs](https://img.shields.io/badge/layout--rs%20-v0.1.3-293b2c.svg)](https://crates.io/crates/layout-rs)
+[![graphviz-rust](https://img.shields.io/badge/graphviz--rust%20-v0.9.6-293b2c.svg)](https://crates.io/crates/graphviz-rust)
+[![resvg](https://img.shields.io/badge/resvg%20-v0.46.0-293b2c.svg)](https://crates.io/crates/resvg)
+[![dot-structures](https://img.shields.io/badge/dot--structures%20-v0.1.2-2a2b49.svg)](https://crates.io/crates/dot-structures)
+[![fdg-sim](https://img.shields.io/badge/fdg--sim%20-v0.9.1-2a2b49.svg)](https://crates.io/crates/fdg-sim)
 
-Narazie jest pisany na Windowsie 64bitowym w wersji 11 na i7, ale docelowo będę chciał kąpilować wersje na starsze windowsy też, linux, macos, ios, android.
+---
 
-Projekt od początku powstaje przy odpowiednich standardach:
+## ✳️**B:**  _Zasady jakości kodu_
 
-* DRY (Don't Repeat Yourself).
-* SRP (Single Responsibility Principle).
-* SoC (Separation of Concerns).
-* Fail Fast (Szybka Porażka).
-* Composition over Inheritance.
-* The Boy Scout Rule.
-* KISS (Keep It Simple, Stupid).
+W kodzie staram się stosować sprawdzone zasady projektowe i inżynierskie, których celem jest czytelność, prostota, niezawodność:
 
-Maksymalna reużywalność i idiomatyczne nazwy funkcji, struktur, plików, folderów, modułów - to podstawa.
+* **DRY (Don't Repeat Yourself)** – eliminacja powielania logiki; reużywalność; pisanie z myślą o ponownym użyciu.
+
+* **DDD (Domain-Driven Design)** – Projektowanie zorientowane na domenę; skupianie się na modelu problemu, a nie na technologii.
+
+* **SRP (Single Responsibility Principle)** – każda struktura, moduł i funkcja ma jedną, jasno określoną odpowiedzialność.
+
+* **OCP (Open/Closed Principle)** – kod otwarty na rozszerzenia, ale zamknięty na modyfikacje.
+
+* **LSP (Liskov Substitution Principle)** - Podtypy muszą być wymienialne z typami bazowymi bez łamania kontraktu.
+
+* **ISP (Interface Segregation Principle)** - Interfejsy powinny być małe i wyspecjalizowane.
+
+* **DIP (Dependency Inversion Principle)** - Moduły wysokiego poziomu nie powinny zależeć od modułów niskiego poziomu.
+
+* **SoC (Separation of Concerns)** – wyraźny podział odpowiedzialności pomiędzy warstwy i moduły.
+
+* **LoD (Law of Demeter) & Minimal Dependencies** – minimalizacja zależności między modułami i strukturami; ograniczanie zewnętrznych zależności dla stabilności projektu.
+
+* **SSoT (Single Source of Truth)** – unikanie definiowania tego samego stanu lub logiki w wielu miejscach.
+
+* _niekiedy →_ **IoC (Inversion of Control) & DI (Dependency Injection)** - Odwrócenie sterowania, wstrzykiwanie zależności.
+
+* _niekiedy →_ **KISS (Keep It Simple, Stupid)** – prostota ponad nadmierną abstrakcję.
+
+* **Modular Design** – małe, niezależne moduły łatwiejsze w utrzymaniu i testowaniu.
+
+* **Composition over Inheritance** – preferowanie kompozycji zamiast dziedziczenia.
+
+* **Encapsulation / Information Hiding** –  ukrywanie szczegółów implementacji i eksponowanie tylko niezbędnego API.
+
+* **Immutability by Default** –  zmienne są niemutowalne, dopiero gdy naprawdę potrzebujesz, użyj `mut`.
+
+* **Idiomatic Rust** – czytelne, jednoznaczne i zgodne z konwencją nazwy funkcji, struktur, modułów oraz folderów.
+
+* **Zero-cost Abstractions** – korzystanie z idiomatycznych abstrakcji bez wpływu na wydajność.
+
+* **Fail Fast & Fail Early & Defensive Programming** – szybkie wykrywanie i raportowanie błędów.
+
+* **Error Handling with Result / Option** – jawne i idiomatyczne zarządzanie błędami.
+
+* **The Boy Scout Rule** – pozostawianie kodu w lepszym stanie, niż go zastało.
+
+## ✳️**C:**  _Powód projektu_
+
+💠 _**Po co kolejny program? - przecież jest ich tak wiele!** - otóż nie! Spośród dostępnych na rynku programów - a długo szukałem / czkeałem, ponad 10 lat - nie istnieje żaden w pełni odpowiadający moim oczekiwaniom. Stąd też głównym adresatem niniejszego rozwiązania, jestem ja sam._
+
+💠 _**Istniejące programy, mają ogromny problem z wydajnością.** Dla przykładu pół miliona osób w `GRAMPS` (napisany w `Python`) daje bazę `sqlite.db` o rozmiarze `3.66 GB` czas otwierania, i manipulacji na danych jest niebotycznie duży. **🎗️ Arboretum ma być szybsze, nie tylko przez szybszą technologię użytą, ale także przez zmianę metodyki działań.**_
+
+💠 .
+
+## ✳️**D:**  _Koncepcje_
+
+### 💭**D1-a:**  _BAZA SYSTEMOWA: PODSTAWOWYCH WYRAZÓW_
+
+```graphviz
+digraph G {
+  fontname="Arial"
+  node [fontname="Arial", shape=box, style=rounded]
+  edge [fontname="Arial", fontsize=10]
+  compound=true;
+  rankdir=RL; 
+
+  subgraph cluster_atom_structure {
+    label = "ANATOMIA ATOMU (LEMMY I FLEKSJI)";
+    style = filled; color = "#dbdbdb";
+    node [style=filled, color=white];
+    
+    atom_model [label="ATOM", penwidth=2, fillcolor="#e1f5fe"];
+    atom_section [label="GRAFIA: TEXT | FONIA: IPA | FONIA: BM-SOUNDEX | FONIA: DM-SOUNDEX", shape=record];
+    atom_section -> atom_model;
+  }
+
+  subgraph cluster_fleksje_atomy {
+    label = "WARSTWA ATOMÓW (FLEKSJE)";
+    style = filled; color = "#dbdbdb";
+    node [style=filled, fillcolor="#e1f5fe", penwidth=0];
+    F_ATOM [label="ATOM FLEKSJA\n(np. Jana, Jasiowi)"];
+  }
+
+  subgraph cluster_lemma_atomy {
+    label = "WARSTWA ATOMÓW (LEMMA)";
+    style = filled; color = "#dbdbdb";
+    node [style=filled, fillcolor="#e1f5fe", penwidth=0];
+    L_ATOM [label="ATOM LEMMA\n(np. Jan, Jaś, lasek)"];
+  }
+
+  subgraph cluster_alloformy {
+    label = "ALLOFORMY";
+    style = filled; color = "#F1E5FE";
+    node [style=filled, fillcolor="#FFFFFF"];
+    A_FORMY [label="ALLONIMY\n(dla onimów) | ALLOLEKSY\n(dla leksemów)", shape=record];
+  }
+
+  subgraph cluster_onim {
+    label = "NAZWY WŁASNE\n\n- ONIMY";
+    style = filled; color = "#e5fee9";
+    K_ONIMY [label="antroponimy | socjoideonimy | etnonimy | choronimy | ojkonimy | urbanonimy | hodonimy | ...", shape=record];
+  }
+
+  subgraph cluster_leksem {
+    label = "NAZWY POSPOLITE\n(Apelatywy onimiczne)\n\n- LEKSY";
+    style = filled; color = "#fef1e5";
+    K_LEKSY [label="antropoleksy | socjoideoleksy | etnoleksy | choroleksy | ojkoleksy | urbanoleksy | hodoleksy | ...", shape=record];
+  }
+
+  translacje [label="WARIANTY JĘZYKOWE", fillcolor="#FFF9C4", style=filled];
+  translacje -> A_FORMY [dir=both];
+  A_FORMY -> L_ATOM [arrowhead=vee]  [dir=both];
+  fleksje_hub [label="fleksje"];
+  L_ATOM -> fleksje_hub [dir=both];
+  fleksje_hub -> F_ATOM;
+  L_ATOM -> K_ONIMY [label="np."];
+  L_ATOM -> K_LEKSY [label="np."];
+}
+```
+
+Przkładowa pozycja
+
+```graphviz
+digraph G {
+    rankdir=RL;
+    fontname="Arial"
+    compound=true;
+    nodesep=0.2; 
+    ranksep=1.5;
+
+    node [fontname="Arial", shape=box, style="filled,rounded", fillcolor="#e1f5fe", penwidth=0];
+
+    subgraph cluster_fleksje_atomy {
+        label = "ATOMY\nFLEKSJE:";
+        fontname="Arial Bold";
+        fontsize=20;
+        fontcolor="#4b4b4b";
+        style=filled;
+        color="#dbdbdb";
+
+        f1_gen_sing [label="Jana\n/jana/"];
+        f1_dat_sing [label="Janowi\n/janɔvi/"];
+        f1_acc_sing [label="Jana\n/jana/"];
+        f1_ins_sing [label="Janem\n/janɛm/"];
+        f1_loc_sing [label="Janie\n/jaɲɛ/"];
+        f1_pre_sing [label="Janie\n/jaɲɛ/"];
+        f1_voc_sing [label="Janie\n/jaɲɛ/"];
+
+        f2_gen_sing [label="Jasia\n/jaɕa/"];
+        f2_dat_sing [label="Jasiowi\n/jaɕɔvi/"];
+        f2_acc_sing [label="Jasia\n/jaɕa/"];
+        f2_ins_sing [label="Jasiem\n/jaɕɛm/"];
+        f2_loc_sing [label="Jasiu\n/jaɕu/"];
+        f2_pre_sing [label="Jasiu\n/jaɕu/"];
+        f2_voc_sing [label="Jasiu\n/jaɕu/"];
+        
+        f3_gen_sing [label="Jonka\n/jɔnka/"];
+        f3_dat_sing [label="Jonkowi\n/jɔnkɔvi/"];
+        f3_acc_sing [label="Jonka\n/jɔnka/"];
+        f3_ins_sing [label="Jonkiem\n/jɔnkjɛm/"];
+        f3_loc_sing [label="Jonku\n/jɔnku/"];
+        f3_pre_sing [label="Jonku\n/jɔnku/"];
+        f3_voc_sing [label="Jonku\n/jɔnku/"];
+
+        f4_gen_sing [label="Johannis\n/joannis/"];
+        f4_dat_sing [label="Johanni\n/joanni/"];
+        f4_acc_sing [label="Johannem\n/joannem/"];
+        f4_abl_sing [label="Johanne\n/joanne/"];
+        f4_voc_sing [label="Johanne\n/joanne/"];
+
+        f5_gen_sing [label="Johanns\n/joːhans/"];
+        f5_dat_sing [label="Johann\n/joːhan/"];
+        f5_acc_sing [label="Johann\n/joːhan/"];
+
+        f6_gen_sing [label="Hansens\n/hanzn̩s/"];
+        f6_dat_sing [label="Hans\n/hans/"];
+        f6_acc_sing [label="Hans\n/hans/"];
+
+        f7_gen_sing [label="Ивана\n/ɪvanə/"];
+        f7_dat_sing [label="Иваnu\n/ɪvanu/"];
+        f7_acc_sing [label="Ивана\n/ɪvanə/"];
+        f7_ins_sing [label="Иваномъ\n/ɪvanəm/"];
+        f7_loc_sing [label="Иванѣ\n/ɪvanʲɛ/"];
+        f7_pre_sing [label="Иванѣ\n/ɪvanʲɛ/"];
+
+        f8_gen_sing [label="Іоанна\n/ɪoannə/"];
+        f8_dat_sing [label="Іоанnu\n/ɪoannu/"];
+        f8_acc_sing [label="Іоанna\n/ɪoannə/"];
+        f8_ins_sing [label="Іоанномъ\n/ɪoannəm/"];
+        f8_loc_sing [label="Іоаннѣ\n/ɪoannʲɛ/"];
+        f8_pre_sing [label="Іоаннѣ\n/ɪoannʲɛ/"];
+    }
+
+    subgraph cluster_lemma_atomy {
+        label = "ATOMY\nLEMMA:";
+        fontname="Arial Bold";
+        fontsize=20;
+        fontcolor="#4b4b4b";
+        style=filled;
+        color="#dbdbdb";
+        
+        f1_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJan\n/jan/", penwidth=1, color="#ababab"];
+        f2_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJaś\n/jaɕ/", penwidth=1, color="#ababab"];
+        f3_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJonek\n/jɔnɛk/", penwidth=1, color="#ababab"];
+        f4_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJohannes\n/joannes/", penwidth=1, color="#ababab"];
+        f5_nom_sing [label="lemma\nantroponim\nimię męskie\n\nJohann\n/joːhan/", penwidth=1, color="#ababab"];
+        f6_nom_sing [label="lemma\nantroponim\nimię męskie\n\nHans\n/hans/", penwidth=1, color="#ababab"];
+        f7_nom_sing [label="lemma\nantroponim\nimię męskie\n\nИванъ\n/ɪvan/", penwidth=1, color="#ababab"];
+        f8_nom_sing [label="lemma\nantroponim\nimię męskie\n\nІоаннъ\n/ɪoan/", penwidth=1, color="#ababab"];
+    }
+
+    node [style="filled,rounded", fillcolor=white, penwidth=1, fontname="Arial"];    
+    translacje1 [label="warianty\njęzykowe"];    
+    alloformy1 [label="allonimy\n(alloformy)\nPOL"];
+    alloformy2 [label="allonimy\n(alloformy)\nLAC"];
+    alloformy3 [label="allonimy\n(alloformy)\nDEU"];
+    alloformy4 [label="allonimy\n(alloformy)\nROS"];
+
+    fleksje1 [label="fleksje"];
+    fleksje2 [label="fleksje"];
+    fleksje3 [label="fleksje"];
+    fleksje4 [label="fleksje"];
+    fleksje5 [label="fleksje"];
+    fleksje6 [label="fleksje"];
+    fleksje7 [label="fleksje"];
+    fleksje8 [label="fleksje"];
+
+    translacje1 -> {alloformy1 alloformy2 alloformy3 alloformy4} [dir=both];    
+    alloformy1 -> {f1_nom_sing f2_nom_sing f3_nom_sing} [dir=both];
+    alloformy2 -> {f4_nom_sing} [dir=both];
+    alloformy3 -> {f5_nom_sing f6_nom_sing} [dir=both];
+    alloformy4 -> {f7_nom_sing f8_nom_sing} [dir=both];
+
+    f1_nom_sing -> fleksje1 [dir=both];
+    f2_nom_sing -> fleksje2 [dir=both];
+    f3_nom_sing -> fleksje3 [dir=both];
+    f4_nom_sing -> fleksje4 [dir=both];
+    f5_nom_sing -> fleksje5 [dir=both];
+    f6_nom_sing -> fleksje6 [dir=both];
+    f7_nom_sing -> fleksje7 [dir=both];
+    f8_nom_sing -> fleksje8 [dir=both];
+
+    fleksje1 -> { f1_gen_sing f1_dat_sing f1_acc_sing f1_ins_sing f1_loc_sing f1_pre_sing f1_voc_sing };
+    fleksje2 -> { f2_gen_sing f2_dat_sing f2_acc_sing f2_ins_sing f2_loc_sing f2_pre_sing f2_voc_sing };
+    fleksje3 -> { f3_gen_sing f3_dat_sing f3_acc_sing f3_ins_sing f3_loc_sing f3_pre_sing f3_voc_sing };
+    fleksje4 -> { f4_gen_sing f4_dat_sing f4_acc_sing f4_abl_sing f4_voc_sing };
+    fleksje5 -> { f5_gen_sing f5_dat_sing f5_acc_sing };
+    fleksje6 -> { f6_gen_sing f6_dat_sing f6_acc_sing };
+    fleksje7 -> { f7_gen_sing f7_dat_sing f7_acc_sing f7_ins_sing f7_loc_sing f7_pre_sing };
+    fleksje8 -> { f8_gen_sing f8_dat_sing f8_acc_sing f8_ins_sing f8_loc_sing f8_pre_sing };
+}
+```
+
+Cel jest prosty, chcę zgromadzić w osobnej bazie sytemowej, imiona, nazwiska, zawody, miejscowości itp
+
+* podczas indeksacji metryki lub innego kilkusetnego źródła, będzie można wpisać fragment słowa, lub parę liter, a sytsem podpowie możliwe, słowa
+
+* uniknięcie głupich błedów z pomyłką pisowni, użytkownik będzię wprowadzał dane podstawowe, metodą przekopiowania słowa do bazy osobistej (o ile jeszcze w niej nie istnieje); elementy z bazy systemowej w badzie osobistej, będą przechowywane pojedynczo (bez duplikatów) natopiast w każdym miejscu gdzie dana nazwa miała by być użyta będzie do niej referencja, dięki temu nie będziemy mnożyć niewiadomo ile powtóżeń Jana, zmniejszając rozmiar. Dodatkowe znalezienie wszystkich osób będzie natychmiastowe, bez potrzeby wyszukiwania za każdym razem.
+
+### 💭**D1-b:**  _BAZA SYSTEMOWA: LOKALIZACJI_
+
+Ta baza będzie w pewien sposób rozszerzeniem bazy **podstawowych wyrazów**   będzie podzielone na obszary świata, które będzie można osobno sobie pobrać, dowiemy się z niej **GDZIE** znajdują się ojkonimy i choronimy na mapie.
+
+### 💭**D1-c:**  _BAZA SYSTEMOWA: PRZYNALEŻNOŚCI_
+
+Ta baza będzie w pewien sposób rozszerzeniem bazy **podstawowych wyrazów**   będzie podzielone na obszary świata, które będzie można osobno sobie pobrać, dowiemy się z niej **KIEDY** dany ojkonimy należałdo danego choronimu.
+
+Obecnie podobną funkcjonalność oferuje [GOV GENEALOGY.NET](https://gov.genealogy.net/item/show/KOPINOJO84WS)
+
+---
+
+### 💭**D2-a:**  _OGÓLNE KONCEPCJE BAZODANOWE_
+
+_Brak kosztownych operacji `JOIN` znanych z `SQL`, model bazy jest grafowy! Z Hipergrafami osiągniętymi przez reifikacje Krawędzi - czyli uznanie że Hiperkrawędź też jest Węzłem. (W SurrealDB jest to banalnie proste i wydajne, bo Surreal pozwala przechowywać tablice linków (Array of Record IDs) bezpośrednio w rekordzie.) Bazy będą maksymalnie zatomizowane a zarazem uporządkowane bardziej niż w modelu GRAMPS._
+
+>```plaintext
+> ├──┬ 📂 clog/
+> │  └── 📄 00000000000000000000.clog
+> └──┬ 📂 manifest/
+>    └── 📄 00000000000000000000.manifest
+>```
+>
+>Nie mamy tu jak w SQLite plików z rozszerzeniem `*.db`
+
+_Architektura oparta na współdzielonym stanie konfiguracyjnym. Wydajna dzięki plikom konfiguracyjnym w formacie CBOR (Concise Binary Object Representation) lub Bincode (bardzo szybki, specyficzny dla Rusta), zamiast parsowania tekstu (TOML/XML/JSON) w czasie rzeczywistym między procesami. Traktuje plik konfiguracyjny jako "token" przekazywania stanu. Atomowy zapis pliku konfiguracyjnego (tempfile + std::fs::rename) - eliminujący błędy związane z np utratą zasilania..; Singleton na poziomie aplikacji (fslock / named-lock)._
+
+
 
 ---
 
@@ -161,7 +438,7 @@ opisane tu :
 >
 > * [GRAMPS (v: 6.0.6) [Python, SQLite]](https://github.com/gramps-project/gramps),
 > * [GeneWeb (v: 7.1.0-beta2 [OCaml])](https://github.com/geneweb/geneweb),
-> * [GOV GENEALOGY.NET](https://gov.genealogy.net/item/show/KOPINOJO84WS),
+> * ,
 > * [MyHeritage Family Tree Builder](https://www.myheritage.pl/family-tree-builder),
 > * [My Family Tree (v: 16) [.NET 10, SQLite]](https://chronoplexsoftware.com/myfamilytree/),
 > * GedCom 5.5.1
