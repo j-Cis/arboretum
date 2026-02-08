@@ -1,5 +1,6 @@
 
 
+
 opisane tu :
 
 * `https://www.cisowscy.com/gene/grampsxml`
@@ -143,6 +144,11 @@ ciąg dalszy opisu nastąpi...
 #### **[C.2.b]** `config-access` Zarządzanie kolekcją baz danych i samymi pojedynczymi bazami stanowiącymi nasze projekty
 
 ciąg dalszy opisu nastąpi...
+
+....
+...ciąg dalszy nastąpi
+
+---
 
 ....
 ...ciąg dalszy nastąpi
